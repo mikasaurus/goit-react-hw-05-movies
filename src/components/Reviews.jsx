@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 
-export const Reviews = () => {
+const Reviews = () => {
   const { id } = useLocation.state;
-  const [reviews, setReviews] = useState;
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     getMovieReviews(id).then(data => setReviews(data.results));
@@ -26,3 +26,5 @@ export const Reviews = () => {
     </ul>
   );
 };
+
+export default Reviews;

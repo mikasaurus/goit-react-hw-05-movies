@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { getMovieCredits } from 'API/moviesAPI';
 import { nanoid } from 'nanoid';
 
-export const Cast = () => {
+const Cast = () => {
   const { id } = useLocation().state;
   const [cast, setCast] = useState([]);
 
@@ -31,3 +31,5 @@ export const Cast = () => {
     </ul>
   );
 };
+
+export default Cast;

@@ -4,7 +4,7 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { Searchbar } from '../components/Searchbar';
 import { nanoid } from 'nanoid';
 
-export const Movies = () => {
+const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('query');
@@ -33,3 +33,5 @@ export const Movies = () => {
     </div>
   );
 };
+
+export default Movies;

@@ -2,7 +2,7 @@ import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
 import { useState, useEffect, Suspense } from 'react';
 import { getMovieDetails } from 'API/moviesAPI';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { id } = useParams();
   const location = useLocation();
   const [movieDetails, setMovieDetails] = useState({
@@ -24,7 +24,7 @@ export const MovieDetails = () => {
         movieId: id,
         title: data.original_title,
         release: data.release_date,
-        rate: data.vote_average,
+        rate: data.vote_average * 10,
         overview: data.overview,
         genres: data.genres.map(genre => genre.name),
         img: `https://image.tmdb.org/t/p/w200${data.poster_path}`,
@@ -35,6 +35,7 @@ export const MovieDetails = () => {
   return (
     <div>
       <Link to={goBack}>Go back</Link>
+
       <div>
         <img src={img} alt={`${title} poster`} />
         <div>
@@ -63,3 +64,5 @@ export const MovieDetails = () => {
     </div>
   );
 };
+
+export default MovieDetails;

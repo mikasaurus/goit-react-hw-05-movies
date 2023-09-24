@@ -6,7 +6,7 @@ axios.defaults.params = {
 };
 
 export const getTrending = async () => {
-  const response = await axios.get('/trending/movie');
+  const response = await axios.get('/movie/popular');
   const data = await response.data;
   return data;
 };
@@ -17,20 +17,20 @@ export const searchMovies = async query => {
   return data;
 };
 
-export const getMovieDetails = async movie_id => {
-  const response = await axios.get(`/movie/${movie_id}`);
+export const getMovieDetails = async id => {
+  const response = await axios.get(`/movie/${id}`);
   const data = await response.data;
   return data;
 };
 
-export const getMovieCredits = async movie_id => {
-  const response = await axios.get(`/movie/${movie_id}/credits`);
+export const getMovieCredits = async id => {
+  const response = await axios.get(`/movie/${id}/credits`);
   const data = await response.data;
   return data;
 };
 
-export const getMovieReviews = async movie_id => {
-  const response = await axios.get(`/movie/${movie_id}/reviews`);
+export const getMovieReviews = async id => {
+  const response = await axios.get(`/movie/${id}/reviews`);
   const data = await response.data;
   return data;
 };
