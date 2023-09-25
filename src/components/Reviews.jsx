@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 
 const Reviews = () => {
-  const { id } = useLocation.state;
+  const { id } = useLocation().state;
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Reviews = () => {
           </li>
         ))
       ) : (
-        <p>Be first person to comment!</p>
+        <p>Be first person to leave a comment!</p>
       )}
     </ul>
   );

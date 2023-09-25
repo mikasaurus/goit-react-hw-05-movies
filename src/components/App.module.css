@@ -1,0 +1,27 @@
+.Navbar {
+  display: flex;
+  gap: 25px;
+  border-bottom: #141e46 solid 2px;
+  box-shadow: 0 5px 2px -4px #141e46;
+}
+
+.NavLink,
+.Link:visited {
+  color: #141e46;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+
+.NavLink:hover,
+.NavLink:active {
+  color: #c70039;
+}
+
+.List {
+  list-style: none;
+}
+
+.Pic {
+  width: 138px;
+  height: 175px;
+}

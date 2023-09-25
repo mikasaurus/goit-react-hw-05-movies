@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import css from './Pages.module.css';
 
 const NotFound = () => {
   const navigate = useNavigate();
@@ -8,7 +9,9 @@ const NotFound = () => {
   return (
     <main>
       <h1>Page not found. Try your luck somewhere else.</h1>
-      <p onClick={goHome}>Go back</p>
+      <button onClick={goHome} className={css.GoBack}>
+        Go back
+      </button>
     </main>
   );
 };

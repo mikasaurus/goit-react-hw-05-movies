@@ -1,0 +1,43 @@
+.Header {
+  color: #141e46;
+  font-size: 22px;
+}
+
+.Link {
+  color: #141e46;
+  text-decoration: none;
+}
+
+.Link:hover,
+.Link:active {
+  color: #c70039;
+}
+
+.Link:visited {
+  color: #ff6969;
+}
+
+.GoBack {
+  border: #141e46 1px solid;
+  border-radius: 7px;
+  margin: 5px;
+  color: #141e46;
+  background-color: white;
+}
+
+.GoBack:hover {
+  border: #c70039 1px solid;
+  color: #c70039;
+  box-shadow: 0 5px 2px -4px #141e46;
+}
+
+.Wrapper {
+  display: flex;
+  gap: 10px;
+  color: #141e46;
+}
+
+.OtherWrapper {
+  display: flex;
+  gap: 10px;
+}

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getMovieCredits } from 'API/moviesAPI';
 import { nanoid } from 'nanoid';
-
+import css from './App.module.css';
 const Cast = () => {
   const { id } = useLocation().state;
   const [cast, setCast] = useState([]);
@@ -16,10 +16,11 @@ const Cast = () => {
   }, [id]);
 
   return (
-    <ul>
+    <ul className={css.List}>
       {cast.map(({ profile_path, name, character }) => (
         <li key={nanoid()}>
           <img
+            className={css.Pic}
             src={profile_path ? `${url}${profile_path}` : defaultImg}
             alt={`${name}`}
           />
