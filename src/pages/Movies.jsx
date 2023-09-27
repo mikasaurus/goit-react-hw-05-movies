@@ -7,7 +7,7 @@ import { nanoid } from 'nanoid';
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-  const query = searchParams.get('query');
+  const query = searchParams.get('query') || '';
 
   const searchHandler = value => {
     setSearchParams({ query: value });

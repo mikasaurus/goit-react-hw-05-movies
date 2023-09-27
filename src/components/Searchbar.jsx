@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import css from './App.module.css';
 
 export const Searchbar = ({ onSearch }) => {
   const [query, setQuery] = useState('');
@@ -18,8 +19,11 @@ export const Searchbar = ({ onSearch }) => {
           placeholder="Search movie"
           onChange={eve => setQuery(eve.target.value)}
           value={query}
+          className={css.Input}
         />
-        <button type="submit">Search</button>
+        <button type="submit" className={css.InputButton}>
+          Search
+        </button>
       </form>
     </div>
   );

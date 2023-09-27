@@ -1,17 +1,15 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import css from './Pages.module.css';
 
 const NotFound = () => {
-  const navigate = useNavigate();
-
-  const goHome = () => navigate('/');
+  const location = useLocation().state?.location ?? '/';
 
   return (
     <main>
       <h1>Page not found. Try your luck somewhere else.</h1>
-      <button onClick={goHome} className={css.GoBack}>
+      <Link to={location} className={css.GoBack}>
         Go back
-      </button>
+      </Link>
     </main>
   );
 };

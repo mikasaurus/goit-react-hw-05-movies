@@ -23,6 +23,8 @@
   margin: 5px;
   color: #141e46;
   background-color: white;
+  padding: 0 3px;
+  text-decoration: none;
 }
 
 .GoBack:hover {
@@ -35,6 +37,7 @@
   display: flex;
   gap: 10px;
   color: #141e46;
+  margin-top: 7px;
 }
 
 .OtherWrapper {

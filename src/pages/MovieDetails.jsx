@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getMovieDetails } from 'API/moviesAPI';
 import css from './Pages.module.css';
@@ -15,9 +15,7 @@ const MovieDetails = () => {
     img: '',
   });
   const { movieId, title, release, rate, overview, genres, img } = movieDetails;
-
-  const navigate = useNavigate();
-  const goBack = () => navigate('/');
+  const location = useLocation().state?.location ?? '/';
 
   useEffect(() => {
     getMovieDetails(id).then(data => {
@@ -35,9 +33,9 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <button onClick={goBack} className={css.GoBack}>
+      <Link to={location} className={css.GoBack}>
         Go back
-      </button>
+      </Link>
       <div className={css.Wrapper}>
         <img src={img} alt={`${title} poster`} />
         <div>
@@ -58,6 +56,7 @@ const MovieDetails = () => {
           Review
         </Link>
       </div>
+      <Outlet />
     </div>
   );
 };

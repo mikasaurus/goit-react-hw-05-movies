@@ -3,6 +3,7 @@
   gap: 25px;
   border-bottom: #141e46 solid 2px;
   box-shadow: 0 5px 2px -4px #141e46;
+  margin-bottom: 7px;
 }
 
 .NavLink,
@@ -24,4 +25,32 @@
 .Pic {
   width: 138px;
   height: 175px;
+}
+
+.Input {
+  margin-top: 10px;
+  margin-right: 5px;
+  width: 250px;
+  outline: none;
+}
+
+.Input:hover,
+.Input:focus {
+  border-color: #ff6969;
+}
+
+.InputButton {
+  border: #141e46 1px solid;
+  border-radius: 3px;
+  color: #141e46;
+  background-color: white;
+  padding: 3px 10px;
+  text-decoration: none;
+}
+
+.InputButton:hover,
+.Input:focus {
+  border: #c70039 1px solid;
+  color: #c70039;
+  box-shadow: 0 5px 2px -4px #141e46;
 }
